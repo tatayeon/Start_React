@@ -19,11 +19,8 @@ const comments = [
 function CommentList(props){
     return (
         <div>
-            {comments.map((comment) => {
-                return (
-                    <Comment name={comment.name} comment={comment.comment} />
-                );
-            })}
+            <Comment name = {"임태연"} comment = {"안녕하세요, 임태연입니다."} />
+            <Comment name = {"유재석"} comment = {"안녕하세요, 유재석이에요."} />
         </div>
     );
 }
