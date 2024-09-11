@@ -1,5 +1,7 @@
 import React from "react";
 
+//조건부 랜더링 실습
+
 const styles = {
     wrapper: {
         padding: 16,
