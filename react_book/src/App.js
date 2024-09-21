@@ -1,9 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
 import MyComponents from './MyComponent';
+import Counter from './Counter';
 
 const App = () => {
-  return <MyComponents name={"kkk"} number={3}>리액트</MyComponents>
+  return <Counter />
 };
 
 export default App;
