@@ -4,12 +4,14 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import CommentList from './chapter_05/CommentList';
 import NotificationList from './chapter_06/NotificationList'
+import TemperatureInput from './chapter_12/TemperatureInput';
+import Calculator from './chapter_12/Calculator';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <React.StrictMode>
-    <NotificationList />
+    <Calculator />
   </React.StrictMode>
 );
 
