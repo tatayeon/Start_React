@@ -1,11 +1,7 @@
-import logo from './logo.svg';
-import './App.css';
-import MyComponents from './MyComponent';
-import Counter from './Counter';
-import Say from './Say';
+import EventPractice from './chapter_4_eventHandling/EventPractice';
 
 const App = () => {
-  return <Say />
+  return <EventPractice />;
 };
 
 export default App;
