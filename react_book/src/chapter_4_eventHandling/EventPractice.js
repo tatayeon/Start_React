@@ -1,43 +1,45 @@
-import React, {Component} from "react";
+import React, { useState } from "react";
 
-class EventPractice extends Component {
+const EventPractice = () => {
+    const [username, setUsername] = useState("");
+    const [message, setMessage] = useState("");
 
-    state = {
-        message: ''
-    }
+    const onChangeUsername = e => setUsername(e.target.value);
+    const onChangeMessage = e => setMessage(e.target.value);
 
-    constructor(props){
-        super(props);
-        this.handleChange = this.handleChange.bind(this);
-        this.handleClick = this.handleClick.bind(this);
-    }
+    const onClick = () => {
+        alert(username + ": " + message);
+        setUsername('');
+        setMessage('');
+    };
 
-    handleChange(e){
-        this.setState({
-            message: e.target.value
-        });
-    }
+    const onKeyPress = e => {
+        if (e.key === "Enter") {
+            onClick();
+        }
+    };
 
-    handleClick(e){
-        this.setState({
-            message: ''
-        });
-    }
+    return (
+        <div>
+            <h1>이벤트 연습</h1>
+            <input
+                type="text"
+                name="username"
+                placeholder="사용자명"
+                value={username}
+                onChange={onChangeUsername}
+            />
+            <input
+                type="text"
+                name="message"
+                placeholder="아무거나 입력"
+                value={message}
+                onChange={onChangeMessage}
+                onKeyPress={onKeyPress}
+            />
+            <button onClick={onClick}>확인</button>
+        </div>
+    );
+};
 
-
-    render() {
-        return(
-            <dev>
-                <h1>이벤트 연습</h1>
-                <input type="text" name="message" placeholder="아무거나 입력해보세요"
-                value={this.state.message}
-                onChange={this.handleChange}
-                >
-                </input>
-                <button onClick={this.handleClick}> 확인</button>
-            </dev>
-        )
-    }
-}
-//임의의 메서드 만들기까지
 export default EventPractice;
