@@ -1,11 +1,17 @@
 import React, { useState } from "react";
 
 const EventPractice = () => {
-    const [username, setUsername] = useState("");
-    const [message, setMessage] = useState("");
+    const [form, setForm] = useState({
+        username : "",
+        message: ""
+    });
 
-    const onChangeUsername = e => setUsername(e.target.value);
-    const onChangeMessage = e => setMessage(e.target.value);
+    const {username, message} = form;
+    const onChange = e =>{
+        const nextForm = {
+            
+        }
+    }
 
     const onClick = () => {
         alert(username + ": " + message);
