@@ -5,11 +5,14 @@ const Info = () =>{
     const[nickname, setNickname] = useState('');
 
     useEffect(() => {
-        console.log("랜더링이 완료되었습니다.");
-        console.log({
-            name, nickname
-        });
-    });
+        console.log("effect");
+        console.log(name);
+        return () =>{
+            console.log("cleanup");
+            console.log(name);
+        }
+
+    }, [name]); //특정값만 변경될 때는 이렇개 변수를 대괄호안에 넣어준다.
 
     const onChangeName = e =>{
         setName(e.target.value);
