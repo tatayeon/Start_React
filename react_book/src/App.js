@@ -1,7 +1,7 @@
-import EventPractice from "./chapter_4_eventHandling/EventPractice";
+import Info from "./chapter_8_Hook/Info";
 
 const App = () =>{
-  return <EventPractice />;
+  return <Info />;
 };
 
 export default App;
