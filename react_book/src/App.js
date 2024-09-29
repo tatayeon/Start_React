@@ -1,23 +1,7 @@
-import Info from './chapter_8_Hook/Info';
-import React, {useState} from 'react';
+import EventPractice from "./chapter_4_eventHandling/EventPractice";
 
-const App = () => {
-  const [visible, setVisible] = useState(false);
-
-  return(
-    <div>
-      <button
-        onClick={
-          () => {
-            setVisible(!visible);
-          }}
-      >
-        {visible ? '숨기기' : '보이기'}
-      </button>
-      <hr />
-      {visible&&<Info />}
-    </div>
-  )
+const App = () =>{
+  return <EventPractice />;
 };
 
 export default App;
