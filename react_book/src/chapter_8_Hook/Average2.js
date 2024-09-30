@@ -19,7 +19,7 @@ const Average2 = () =>{
         const nextList = list.concat(parseInt(number));
         setList(nextList);
         setNumber('');
-    }, [number, list])
+    }, [number, list]);
 
     const avg = useMemo(()=> getAverage(list), [list]);
 
