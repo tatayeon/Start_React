@@ -3,11 +3,12 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import SingUp from './chapter_11/SignUp'
+import AttendanceBook from './chapter_10/AttendanceBook'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <React.StrictMode>
-    <SingUp />
+    <AttendanceBook />
   </React.StrictMode>
 );
 
