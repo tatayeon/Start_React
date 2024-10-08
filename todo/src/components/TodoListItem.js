@@ -7,7 +7,8 @@ import './TodoListItem.scss'
 import cn from 'classnames'
 
 const TodoListItem = ({todo, onRemove, onToggle}) => {
-    const {id, text, checked} = todo;
+    const {id, text, checked} = todo; //?
+    //여기서는 TodoList에 넘어온 값으로 아이템을 조합해서 랜더링한다?
 
     return (
         <div className='TodoListItem'>

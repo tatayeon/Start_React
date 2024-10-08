@@ -3,6 +3,7 @@ import {useState, useCallback} from 'react'
 import './TodoInsert.scss'
 
 const TodoInsert = ({onInsert}) => {
+    //입력하는 값을 관리
     const [value, setValue] = useState('');
 
     const onChange = useCallback(e => {
@@ -13,9 +14,9 @@ const TodoInsert = ({onInsert}) => {
         e => {
             onInsert(value);
             setValue('');
-            e.preventDefault();
+            e.preventDefault(); // ?
         },
-        [onInsert, value],
+        [onInsert, value], //onInsert나 value에 변동이 생기면 작동한다.
     )
 
     return (

@@ -4,6 +4,7 @@ import TodoList from "./components/TodoList";
 import TodoTemplate from "./components/TodoTemplate"
 
 const App = () => {
+  //todos는 app.js에서 관리하는 state가 된다.
   const [todos, setTodos] = useState([
     {
       id:1,
@@ -22,6 +23,7 @@ const App = () => {
     }
   ]);
 
+  //여기는 새로운 객체를 만들 때마다 id값에 1씩 더해주는 값을 ref로 관리한다.
   const nextId = useRef(4);
 
   const onRemove = useCallback(
@@ -30,7 +32,8 @@ const App = () => {
     },
     [todos],
   );
-
+  
+  //props를 전달하는 함수
   const onInsert = useCallback(
     text => {
       const todo = {
@@ -58,6 +61,7 @@ const App = () => {
   return(
     <TodoTemplate>
       <TodoInsert onInsert={onInsert}/>
+      {/* 여기서 todo는 porps로 TodoList로 넘어간다. */}
       <TodoList todos={todos} onRemove={onRemove} onToggle = {onToggle} />
     </TodoTemplate>
   );
